@@ -27,4 +27,27 @@ CREATE OR REPLACE WAREHOUSE dbt_DEV_WH
   AUTO_RESUME = true
   INITIALLY_SUSPENDED = TRUE;
 
-GRANT ALL ON WAREHOUSE dbt_DEV_WH TO ROLE dbt_DEV_ROLE
+GRANT ALL ON WAREHOUSE dbt_DEV_WH TO ROLE dbt_DEV_ROLE;
+
+
+CREATE TABLE bookings_1 (
+    id INTEGER,
+    booking_reference INTEGER,
+    hotel STRING,
+    booking_date DATE,
+    cost INTEGER
+);
+CREATE TABLE bookings_2 (
+    id INTEGER,
+    booking_reference INTEGER,
+    hotel STRING,
+    booking_date DATE,
+    cost INTEGER
+);
+CREATE TABLE customers (
+    id INTEGER,
+    first_name STRING,
+    last_name STRING,
+    birthdate DATE,
+    membership_no INTEGER
+);
